@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 void MenuUtama(int *pilihan);
 void SubMenuSatu(int pilihan);
@@ -10,8 +9,6 @@ void ExitProgram();
 void RumahTangga();
 void Transportasi();
 void MakananDanLayanan();
-
-void timer(int secs);
 
 int main() {
     const char *menuList[3] = {"Rumah Tangga", "Tranportasi", "Makanan dan Layanan"};
@@ -32,6 +29,8 @@ void MenuUtama(int *pilihan) {
 
         if (*pilihan < 1 || *pilihan > 4) {
             printf("\nSilahkan masukkan angka yang sesuai dengan pilihan yang ada!\n");
+            // system("pause");
+            // system("cls");
             Sleep(1250);
             continue;   
         }
@@ -51,6 +50,9 @@ void SubMenuSatu(int pilihan) {
         case 3:
             MakananDanLayanan();
             break;
+        case 4:
+            ExitProgram();
+            break;
     }
 }
 
@@ -58,6 +60,7 @@ void SubMenuSatu(int pilihan) {
 
 void ExitProgram() {
     printf("\nDadah\n");
+    Sleep(850);
     exit(4);
 }
 
