@@ -9,7 +9,6 @@ void menuSetelahInputRumahTangga(int *pilihan, int kategori[]);
 void perhitungan(int kategori[]);
 void kesimpulan(float total_co2);
 
-
 int main () {
     /* Penjelasan array kategori:
      * Array kategori memiliki besar sebanyak 5 elemen berguna untuk 
@@ -19,7 +18,7 @@ int main () {
      *      - Index ke-2 untuk input kategori kantong sampah,
      *      - Index ke-3 untuk input kategori kayu bakar,
      *      - Index ke-4 untuk input kategori LPG
-    **/
+     */
     int pilihan, kategori[5] = {0};
     menuSebelumInputRumahTangga(&pilihan, kategori);
 }
@@ -100,7 +99,7 @@ void perhitungan(int kategori[]) {
      *      - Index ke-2 untuk hasil co2 kantong sampah,
      *      - Index ke-3 untuk hasil co2 kayu bakar,
      *      - Index ke-4 untuk hasil co2 LPG
-    **/
+     */
     float kwh, co2[5] = {0};
     float total_co2;
     
@@ -122,7 +121,7 @@ void perhitungan(int kategori[]) {
      *      1 kg sampah kering = 0,09 kg CH4
      *      1 kg sampah basah  = 0,44 kg CH4
      * Maka bisa diambil rata-rta untuk 1x kantong sampah = 0.21 kg CH4
-    **/
+     */
     co2[2] = kategori[2] * 0.32 * 0.21;    
 
     printf ("Maka Emisi karbon yang dihasilkan sampah adalah : %.3f Kg CO2\n\n", co2[2]); 
